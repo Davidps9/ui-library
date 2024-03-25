@@ -1,20 +1,36 @@
 import { ButtonContainVariant, Size } from "../@types/types";
 
-export const createButtonVariants = (variant: ButtonContainVariant, size: Size, disabled: boolean, borderColor: string, focusable: boolean, className: string) => {
-    let buttonStyles = className + ' ';
+export const createButtonVariants = (variant: ButtonContainVariant, fontColor: string, size: Size, disabled: boolean, borderColor: string, rounded: boolean, focusable: boolean, className: string) => {
+    let buttonStyles = className + '';
 
+    if (fontColor === 'white') {
+        buttonStyles += ' text-white';
+    }
+    else {
+        buttonStyles += ` text-${fontColor}-400`;
+    }
+    if (!disabled) {
+        buttonStyles += ` border-${borderColor}-400`;
+    }
+    else {
+        buttonStyles += ' opacity-50 pointer-events-none border-gray-400';
+
+    }
+    if (rounded) {
+        buttonStyles += ' rounded-full';
+    }
     switch (variant) {
         case 'text':
-            buttonStyles += 'bg-transparent border-none';
+            buttonStyles += ' bg-transparent border-none';
             break;
         case 'outlined':
-            buttonStyles += 'bg-transparent border-2';
+            buttonStyles += ' bg-transparent border-2';
             break;
         case 'contained':
-            buttonStyles += 'bg-blue-400 border-2';
+            buttonStyles += ' bg-blue-400 border-none';
             break;
         default:
-            buttonStyles += 'bg-transparent border-2';
+            buttonStyles += ' bg-transparent border-2';
             break;
     }
     switch (size) {
@@ -31,18 +47,8 @@ export const createButtonVariants = (variant: ButtonContainVariant, size: Size, 
             buttonStyles += ' px-4 py-2';
             break;
     }
-    if (!disabled) {
 
-        buttonStyles += ` border-${borderColor}-400 hover:border-${borderColor}-400 hover:text-white`;
-    }
-    else {
-        buttonStyles += ' opacity-50 pointer-events-none border-gray-400';
-
-    }
-    if (focusable) {
-        buttonStyles += ` focus:outline-none focus:ring-2 focus:ring-${borderColor}-400`;
-    }
-    else {
+    if (!focusable) {
         buttonStyles += ' focus:outline-none';
     }
 

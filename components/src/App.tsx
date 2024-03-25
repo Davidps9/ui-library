@@ -5,10 +5,11 @@ function App() {
 
   return (
     <>
-      <Sbutton text='hola' variant='text' uppercase />
-      <Sbutton text='hola' variant='contained' uppercase />
-      <Sbutton text='hola' variant='outlined' borderColor='emerald' uppercase />
-      <Sbutton text='hola' variant='outlined' disabled uppercase />
+      <Sbutton text='Click me' variant='text' uppercase />
+      <Sbutton text='Click me' variant='contained' uppercase />
+      <Sbutton text='Click me' fontColor='blue' variant='outlined' borderColor='blue' uppercase />
+      <Sbutton text='Click me' variant='outlined' borderColor='red' uppercase />
+      <Sbutton text='Click me' variant='outlined' disabled uppercase />
 
     </>
   )
