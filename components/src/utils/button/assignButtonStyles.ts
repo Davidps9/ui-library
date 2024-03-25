@@ -1,20 +1,19 @@
-import { ButtonContainVariant, Size } from "../@types/types";
+import { ButtonVariantProps } from "../../@types/buttonTypes";
+import assignBorderColor from "../assignBorderColor";
+import assignFontColor from "../text/assignFontColor";
 
-export const createButtonVariants = (variant: ButtonContainVariant, fontColor: string, size: Size, disabled: boolean, borderColor: string, rounded: boolean, focusable: boolean, className: string) => {
-    let buttonStyles = className + '';
+export default function assignButtonStyles(props: ButtonVariantProps) {
 
-    if (fontColor === 'white') {
-        buttonStyles += ' text-white';
-    }
-    else {
-        buttonStyles += ` text-${fontColor}-400`;
-    }
+
+    let buttonStyles = props.SButtonclass + '';
+    const { variant, fontColor, size, disabled, borderColor, rounded, focusable } = props;
+
+    buttonStyles += assignFontColor(fontColor, buttonStyles);
     if (!disabled) {
-        buttonStyles += ` border-${borderColor}-400`;
+        buttonStyles += assignBorderColor(borderColor, buttonStyles);
     }
     else {
         buttonStyles += ' opacity-50 pointer-events-none border-gray-400';
-
     }
     if (rounded) {
         buttonStyles += ' rounded-full';
@@ -47,10 +46,8 @@ export const createButtonVariants = (variant: ButtonContainVariant, fontColor: s
             buttonStyles += ' px-4 py-2';
             break;
     }
-
     if (!focusable) {
         buttonStyles += ' focus:outline-none';
     }
-
     return buttonStyles;
 }
