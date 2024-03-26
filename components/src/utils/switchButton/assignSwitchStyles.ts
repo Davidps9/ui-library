@@ -5,12 +5,7 @@ import assignSwitchSGenerics from "./assingSwitchGenerics";
 export default function assignSwitchStyles(props: SwitchVariantProps) {
 
     let switchStyles = props.SSwitchclass + '';
-    const { color, checked, disabled, size } = props;
-
-
-    if (disabled) {
-        switchStyles += ' bg-slate-400';
-    }
+    const { color, disabled, size } = props;
 
     if (disabled) {
         switchStyles += ' opacity-50 pointer-events-none';

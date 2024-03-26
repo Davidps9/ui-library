@@ -1,6 +1,5 @@
-import './App.css'
-import SAvatar from '../avatar/SAvatar'
 import SSwitch from '../switchButton/SSwitch'
+import './App.css'
 import Sbutton from './button/Sbutton'
 
 function App() {
