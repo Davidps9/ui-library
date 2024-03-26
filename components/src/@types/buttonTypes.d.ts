@@ -1,4 +1,4 @@
-import { Size, BorderColors, FontColors } from './generics';
+import { Size, Colors } from './generics';
 
 export type SbuttonProps = {
     text: string,
@@ -8,9 +8,9 @@ export type SbuttonProps = {
     size?: Size,
     focusable?: boolean,
     uppercase?: boolean,
-    borderColor?: ButtonBorderColors,
+    borderColor?: Colors,
     rounded?: boolean,
-    fontColor?: FontColors,
+    fontColor?: Colors,
 }
 
 export type ButtonContainVariant = "text" | "outlined" | "contained"

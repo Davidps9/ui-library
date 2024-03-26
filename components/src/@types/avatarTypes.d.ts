@@ -1,13 +1,13 @@
-import { Size, BorderColors, FontColors } from './generics';
+import { Size, Colors } from './generics';
 
 
 export type SAvatarProps = {
     size?: Size,
-    borderColor?: BorderColors,
+    borderColor?: Colors,
     rounded?: boolean,
     focusable?: boolean,
     uppercase?: boolean,
-    fontColor?: FontColors,
+    fontColor?: Colors,
     border?: boolean,
     src?: string,
     alt?: string,
@@ -18,7 +18,7 @@ export type SAvatarProps = {
 
 export interface AvatarVariantProps {
     size: Size;
-    borderColor: BorderColors;
+    borderColor: Colors;
     rounded: boolean;
     border: boolean;
     focusable: boolean;
