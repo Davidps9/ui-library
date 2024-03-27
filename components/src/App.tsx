@@ -18,7 +18,7 @@ function App() {
       <SSwitch size='large' color='red' checked />
       <SSwitch size='medium' color='blue' checked />
       <SSwitch size='small' color='amber' checked />
-      <SCard title='Lizard' subtitle='The green african lizard' textColor='white' limitText={1} text='Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica' size='small' backgroundColor='green' borderColor='blue' rounded hoverable image='https://mui.com/static/images/cards/contemplative-reptile.jpg' />
+      <SCard title='Lizard' subtitle='The green african lizard' textColor='white' limitText={50} text='Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica' size='small' backgroundColor='green' borderColor='blue' rounded hoverable image='https://mui.com/static/images/cards/contemplative-reptile.jpg' />
       <SCard title='Lizard' subtitle='The green african lizard' text='Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica' size='medium' backgroundColor='green' borderColor='blue' rounded hoverable image='https://mui.com/static/images/cards/contemplative-reptile.jpg' />
       <SCard title='Lizard' subtitle='The green african lizard' text='Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica' size='large' backgroundColor='green' borderColor='blue' rounded hoverable image='https://mui.com/static/images/cards/contemplative-reptile.jpg' />
     </>

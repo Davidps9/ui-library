@@ -9,16 +9,16 @@ export default function assignCardStyles(props: CardVariantProps) {
 
     switch (size) {
         case 'small':
-            cardStyles += ' w-40 h-auto gap-4';
+            cardStyles += ' min-w-40 h-auto gap-4 max-w-60';
             break;
         case 'medium':
-            cardStyles += ' w-60 h-auto gap-4';
+            cardStyles += ' min-w-60 h-auto gap-4 max-w-80';
             break;
         case 'large':
-            cardStyles += ' w-80 h-auto gap-4';
+            cardStyles += ' min-w-80 h-auto gap-4 max-w-96';
             break;
         default:
-            cardStyles += ' w-60 h-auto gap-4';
+            cardStyles += ' w-60 h-auto gap-4 max-w-80';
             break;
     }
     if (rounded) cardStyles += ' rounded-md';
