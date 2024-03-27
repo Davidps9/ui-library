@@ -3,7 +3,7 @@ import { Colors, Size } from "./generics"
 export type SSwitchProps = {
     color?: Colors,
     checked?: boolean,
-    onChange?: (checked: boolean) => void,
+    onChange?: () => void,
     disabled?: boolean,
     size?: Size,
 }

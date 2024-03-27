@@ -1,6 +1,6 @@
-import { SAvatarProps } from '../src/@types/avatarTypes';
-import assignAvatarStyles from '../src/utils/avatar/assignAvatarStyles';
-import assignTextStyles from '../src/utils/text/assignTextStyles';
+import { SAvatarProps } from '../@types/avatarTypes';
+import assignAvatarStyles from '../utils/avatar/assignAvatarStyles';
+import assignTextStyles from '../utils/text/assignTextStyles';
 
 export default function SAvatar({ hoverable = false, block = false, border = false, size = 'medium', fontColor = 'white', borderColor = 'white', focusable = false, rounded = true, src = '', name = '', alt = '', uppercase = false }: SAvatarProps) {
 
@@ -9,7 +9,7 @@ export default function SAvatar({ hoverable = false, block = false, border = fal
     const textStyles = assignTextStyles(fontColor, size);
 
     return (
-        <div className="flex flex-col justify-center items-center w-fit">
+        <div className={(block ? "flex " : "inline-flex ") + "w-fit justify-center items-center flex-col"}>
             <img className={avatarStyles} src={src} alt={alt} />
             {name && <p className={textStyles}>{uppercase ? name.toUpperCase() : name}</p>}
         </div>
