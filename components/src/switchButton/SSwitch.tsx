@@ -3,7 +3,7 @@ import { SSwitchProps } from "../@types/switchTypes";
 import assignSwitchStyles from "../utils/switchButton/assignSwitchStyles";
 import assignSwitchGenerics from "../utils/switchButton/assingSwitchGenerics";
 
-export default function SSwitch(props: SSwitchProps) {
+export function SSwitch(props: SSwitchProps) {
 
     const { size, color, disabled, checked, onChange } = props;
 

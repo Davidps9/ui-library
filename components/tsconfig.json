@@ -19,6 +19,10 @@
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
+    "declaration": true,
+    "typeRoots": [
+      "./src/@types/types.d.ts"
+    ],
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
@@ -26,7 +30,8 @@
     "src",
     "src/switchButton/SSwitch.tsx",
     "src/avatar/SAvatar.tsx",
-    "src/@types"
+    "src/@types",
+    "./index.ts"
   ],
   "references": [
     {

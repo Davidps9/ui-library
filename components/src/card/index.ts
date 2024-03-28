@@ -1,0 +1,2 @@
+export { SCard } from "./SCard";
+
