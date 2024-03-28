@@ -1,4 +1,4 @@
-import { SCardsProps } from '../@types/cardTypes';
+import { SCardsProps } from '../../../src/@types/cardTypes';
 import assignCardStyles from '../utils/card/assignCardStyles';
 import assignFontColor from '../utils/text/assignFontColor';
 

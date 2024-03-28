@@ -1,5 +1,6 @@
-import { CardVariantProps } from "../../@types/cardTypes";
+import { CardVariantProps } from "../../../../src/@types/cardTypes";
 import assignBackgroundColor from "../assignBackgroundColor";
+import assignBorderColor from "../assignBorderColor";
 
 
 export default function assignCardStyles(props: CardVariantProps) {
