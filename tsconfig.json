@@ -28,9 +28,6 @@
   },
   "include": [
     "src",
-    "src/switchButton/SSwitch.tsx",
-    "src/avatar/SAvatar.tsx",
-    "src/@types",
     "./index.ts"
   ],
   "references": [
