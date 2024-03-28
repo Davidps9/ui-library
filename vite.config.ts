@@ -13,8 +13,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'index.ts'),
-      name: 'simple-ui-lib',
-      fileName: (format) => `simple-ui-lib.${format}.js`,
+      name: 'simple-ui-library',
+      fileName: (format) => `simple-ui-library.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],

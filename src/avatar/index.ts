@@ -1,2 +1,0 @@
-export { SAvatar } from "./SAvatar";
-
