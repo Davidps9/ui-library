@@ -1,6 +1,12 @@
-import { Colors, Size } from "../../@types/generics";
 import assignBackgroundColor from "../assignBackgroundColor";
-
+import { Colors, Size } from "../../../index";
+export type SwitchVariantProps = {
+    SSwitchclass: string,
+    color?: Colors,
+    checked?: boolean,
+    disabled?: boolean,
+    size?: Size,
+}
 export default function assignSwitchSGenerics(size: Size, parent: boolean, color: Colors, switchStyles: string) {
 
     if (parent) {

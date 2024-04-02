@@ -1,7 +1,14 @@
-import { AvatarVariantProps } from "../../@types/avatarTypes";
 import assignBorderColor from "../assignBorderColor";
+import { Colors, Size } from "../../../index";
 
-
+export interface AvatarVariantProps {
+    size: Size;
+    borderColor: Colors;
+    rounded: boolean;
+    border: boolean;
+    focusable: boolean;
+    hoverable: boolean;
+}
 
 export default function assignAvatarStyles(props: AvatarVariantProps) {
 

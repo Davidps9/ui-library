@@ -1,5 +1,21 @@
-import { SbuttonProps } from "../@types/buttonTypes";
 import assignButtonStyles from "../utils/button/assignButtonStyles";
+import { Colors, Size } from "../../index";
+
+export type SbuttonProps = {
+    text: string,
+    onClick?: () => void,
+    disabled?: boolean,
+    variant?: ButtonContainVariant,
+    size?: Size,
+    focusable?: boolean,
+    uppercase?: boolean,
+    borderColor?: Colors,
+    rounded?: boolean,
+    fontColor?: Colors,
+}
+
+export type ButtonContainVariant = "text" | "outlined" | "contained"
+
 
 
 export function Sbutton({ text, fontColor = 'white', rounded = false, focusable = false, borderColor = 'blue', uppercase, onClick, disabled = false, variant = "outlined", size = 'medium' }: SbuttonProps) {

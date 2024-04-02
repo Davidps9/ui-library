@@ -1,7 +1,16 @@
 import { useEffect, useState } from "react";
-import { SSwitchProps } from "../@types/switchTypes";
 import assignSwitchStyles from "../utils/switchButton/assignSwitchStyles";
 import assignSwitchGenerics from "../utils/switchButton/assingSwitchGenerics";
+import { Colors, Size } from "../../index";
+
+export type SSwitchProps = {
+    color?: Colors,
+    checked?: boolean,
+    onChange?: () => void,
+    disabled?: boolean,
+    size?: Size,
+}
+
 
 export function SSwitch(props: SSwitchProps) {
 

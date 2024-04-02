@@ -1,5 +1,10 @@
-import { CardVariantProps } from "../../@types/cardTypes";
 import assignBackgroundColor from "../assignBackgroundColor";
+import { Colors, Size } from "../../../index";
+
+export type CardVariantProps = {
+    size: Size, rounded: boolean, hoverable: boolean, backgroundColor: Colors, cardStyles: string
+}
+
 
 
 export default function assignCardStyles(props: CardVariantProps) {

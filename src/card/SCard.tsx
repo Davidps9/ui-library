@@ -1,6 +1,21 @@
-import { SCardsProps } from '../@types/cardTypes';
 import assignCardStyles from '../utils/card/assignCardStyles';
 import assignFontColor from '../utils/text/assignFontColor';
+import { Colors, Size } from "../../index";
+
+export type SCardsProps = {
+    backgroundColor?: Colors,
+    rounded?: boolean,
+    hoverable?: boolean,
+    image?: string,
+    text?: string,
+    title?: string,
+    subtitle?: string,
+    size?: Size,
+    textColor?: Colors,
+    limitText?: number,
+
+}
+
 
 export function SCard({ backgroundColor = 'black', limitText = 0, textColor = 'white', rounded = true, hoverable = true, image, text, title, subtitle, size = 'medium' }: SCardsProps) {
 

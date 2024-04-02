@@ -1,6 +1,5 @@
-import { Size } from "../../@types/generics";
 import assignFontColor from "./assignFontColor";
-
+import { Size } from "../../../index";
 
 
 

@@ -1,6 +1,21 @@
-import { ButtonVariantProps } from "../../@types/buttonTypes";
+import { Size } from "../../../index";
 import assignBorderColor from "../assignBorderColor";
 import assignFontColor from "../text/assignFontColor";
+
+export type ButtonContainVariant = "text" | "outlined" | "contained"
+
+
+export interface ButtonVariantProps {
+    variant: ButtonContainVariant;
+    fontColor: string;
+    size: Size;
+    disabled: boolean;
+    borderColor: string;
+    rounded: boolean;
+    focusable: boolean;
+    SButtonclass: string;
+
+}
 
 export default function assignButtonStyles(props: ButtonVariantProps) {
 
