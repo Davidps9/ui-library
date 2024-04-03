@@ -1,7 +1,7 @@
 {
   "name": "simple-material-ui-library",
   "private": false,
-  "version": "0.0.18",
+  "version": "0.0.24",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -28,13 +28,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "prepare": "npm run build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "prepare": "npm install tailwindcss postcss autoprefixer && npx tailwindcss init -p && node -e \"const fs = require('fs'); const lineToAdd = '    content: [\\'node_modules/simple-material-ui-library/**/*.{html,js,jsx,ts,tsx}\\'],\\n'; const filePath = 'tailwind.config.js'; const fileData = fs.readFileSync(filePath, 'utf8'); const index = fileData.indexOf('export default {'); const modifiedFileData = fileData.slice(0, index + 'export default {'.length) + lineToAdd + fileData.slice(index + 'export default {'.length); fs.writeFileSync(filePath, modifiedFileData);\"",
+    "preview": "vite preview",
+    "postinstall": "npm run prepare"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
@@ -48,7 +49,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.8.1"
