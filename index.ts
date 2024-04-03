@@ -1,7 +1,7 @@
-export { Sbutton } from "./src/button/Sbutton";
-export { SCard } from "./src/card/SCard";
-export { SAvatar } from "./src/avatar/SAvatar";
-export { SSwitch } from "./src/switchButton/SSwitch";
+export { SButton } from "./src/button/index";
+export { SCard } from "./src/card/index";
+export { SAvatar } from "./src/avatar/index";
+export { SSwitch } from "./src/switchButton/index";
 
 export type Size = "small" | "medium" | "large";
 

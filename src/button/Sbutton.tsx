@@ -18,7 +18,7 @@ export type ButtonContainVariant = "text" | "outlined" | "contained"
 
 
 
-export function Sbutton({ text, fontColor = 'white', rounded = false, focusable = false, borderColor = 'blue', uppercase, onClick, disabled = false, variant = "outlined", size = 'medium' }: SbuttonProps) {
+export default function Sbutton({ text, fontColor = 'white', rounded = false, focusable = false, borderColor = 'blue', uppercase, onClick, disabled = false, variant = "outlined", size = 'medium' }: SbuttonProps) {
 
     const SButtonclass = ' hover:scale-105 transition duration-200 font-bold m-2';
     const buttonProps = {

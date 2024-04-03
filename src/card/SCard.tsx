@@ -17,7 +17,7 @@ export type SCardsProps = {
 }
 
 
-export function SCard({ backgroundColor = 'black', limitText = 0, textColor = 'white', rounded = true, hoverable = true, image, text, title, subtitle, size = 'medium' }: SCardsProps) {
+export default function SCard({ backgroundColor = 'black', limitText = 0, textColor = 'white', rounded = true, hoverable = true, image, text, title, subtitle, size = 'medium' }: SCardsProps) {
 
     const cardstyle = assignCardStyles({ backgroundColor, rounded, hoverable, size, cardStyles: '' });
     return (

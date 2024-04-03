@@ -18,7 +18,7 @@ export type SAvatarProps = {
 }
 
 
-export function SAvatar({ hoverable = false, block = false, border = false, size = 'medium', fontColor = 'white', borderColor = 'white', focusable = false, rounded = true, src = '', name = '', alt = '', uppercase = false }: SAvatarProps) {
+export default function SAvatar({ hoverable = false, block = false, border = false, size = 'medium', fontColor = 'white', borderColor = 'white', focusable = false, rounded = true, src = '', name = '', alt = '', uppercase = false }: SAvatarProps) {
 
     const avatarStyles = assignAvatarStyles({ size, hoverable, borderColor, focusable, rounded, border });
 

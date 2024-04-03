@@ -12,7 +12,7 @@ export type SSwitchProps = {
 }
 
 
-export function SSwitch(props: SSwitchProps) {
+export default function SSwitch(props: SSwitchProps) {
 
     const { size, color, disabled, checked, onChange } = props;
 
