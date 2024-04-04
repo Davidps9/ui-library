@@ -1,6 +1,5 @@
 import assignButtonStyles from "../utils/button/assignButtonStyles";
 import { Colors, Size } from "../../index";
-import { Children } from "react";
 
 export type SbuttonProps = {
     onClick?: () => void,
@@ -12,14 +11,15 @@ export type SbuttonProps = {
     borderColor?: Colors,
     rounded?: boolean,
     fontColor?: Colors,
-    children: string
+    children: string,
+    type?: "button" | "submit" | "reset"
 }
 
 export type ButtonContainVariant = "text" | "outlined" | "contained"
 
 
 
-export default function Sbutton({ children, fontColor = 'white', rounded = false, focusable = false, borderColor = 'blue', uppercase, onClick, disabled = false, variant = "outlined", size = 'medium' }: SbuttonProps) {
+export default function Sbutton({ children, type, fontColor = 'white', rounded = false, focusable = false, borderColor = 'blue', uppercase, onClick, disabled = false, variant = "outlined", size = 'medium' }: SbuttonProps) {
 
     const SButtonclass = ' hover:scale-105 transition duration-200 font-bold m-2';
     const buttonProps = {
@@ -37,7 +37,7 @@ export default function Sbutton({ children, fontColor = 'white', rounded = false
 
 
     return (
-        < button className={buttonStyles} onClick={onClick} >
+        < button type={type} className={buttonStyles} onClick={onClick} >
             {uppercase ? children?.toUpperCase() : children}
         </button >
     )
