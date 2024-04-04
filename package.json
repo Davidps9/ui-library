@@ -1,7 +1,7 @@
 {
   "name": "simple-material-ui-library",
   "private": false,
-  "version": "0.0.24",
+  "version": "0.0.30",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -28,9 +28,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "prepare": "npm install tailwindcss postcss autoprefixer && npx tailwindcss init -p && node -e \"const fs = require('fs'); const lineToAdd = '    content: [\\'node_modules/simple-material-ui-library/**/*.{html,js,jsx,ts,tsx}\\'],\\n'; const filePath = 'tailwind.config.js'; const fileData = fs.readFileSync(filePath, 'utf8'); const index = fileData.indexOf('export default {'); const modifiedFileData = fileData.slice(0, index + 'export default {'.length) + lineToAdd + fileData.slice(index + 'export default {'.length); fs.writeFileSync(filePath, modifiedFileData);\"",
-    "preview": "vite preview",
-    "postinstall": "npm run prepare"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
