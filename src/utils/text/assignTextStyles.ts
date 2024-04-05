@@ -1,9 +1,10 @@
 import assignFontColor from "./assignFontColor";
-import { Size } from "../../../index";
+import { FontWeight, Size } from "../../../index";
+import assignfontWheight from "../assingFontWheight";
 
 
 
-export default function createTextStyles(fontColor: string, size: Size) {
+export default function createTextStyles(fontColor: string, fontWeight: FontWeight, size: Size) {
 
     let textStyles = 'text-center ';
     textStyles += assignFontColor(fontColor, textStyles);
@@ -21,5 +22,6 @@ export default function createTextStyles(fontColor: string, size: Size) {
             textStyles += ' text-base w-fit';
             break;
     }
+    textStyles += assignfontWheight({ fontWeight, style: textStyles });
     return textStyles;
 }

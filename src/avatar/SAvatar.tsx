@@ -23,7 +23,7 @@ export default function SAvatar({ hoverable = false, block = false, border = fal
 
     const avatarStyles = assignAvatarStyles({ size, hoverable, borderColor, focusable, rounded, border, fontWeight });
 
-    const textStyles = assignTextStyles(fontColor, size);
+    const textStyles = assignTextStyles(fontColor, fontWeight, size);
 
     return (
         <div className={(block ? "flex " : "inline-flex ") + "w-fit justify-center items-center flex-col"}>
