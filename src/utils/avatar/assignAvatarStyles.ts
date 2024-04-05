@@ -1,5 +1,5 @@
 import assignBorderColor from "../assignBorderColor";
-import { Colors, Size } from "../../../index";
+import { Colors, FontWeight, Size } from "../../../index";
 
 export interface AvatarVariantProps {
     size: Size;
@@ -8,12 +8,13 @@ export interface AvatarVariantProps {
     border: boolean;
     focusable: boolean;
     hoverable: boolean;
+    fontWeight: FontWeight;
 }
 
 export default function assignAvatarStyles(props: AvatarVariantProps) {
 
     let avatarStyles = '';
-    const { size, borderColor, border, rounded, focusable, hoverable } = props;
+    const { size, borderColor, border, rounded, focusable, hoverable, fontWeight } = props;
 
     avatarStyles += assignBorderColor(borderColor, avatarStyles);
     if (rounded) {
