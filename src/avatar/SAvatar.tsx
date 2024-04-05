@@ -1,6 +1,6 @@
 import assignAvatarStyles from '../utils/avatar/assignAvatarStyles';
 import assignTextStyles from '../utils/text/assignTextStyles';
-import { Colors, Size } from "../../index";
+import { Colors, FontWeight, Size } from "../../index";
 
 export type SAvatarProps = {
     size?: Size,
@@ -15,12 +15,13 @@ export type SAvatarProps = {
     name?: string,
     hoverable?: boolean
     block?: boolean
+    fontWeight?: FontWeight
 }
 
 
-export default function SAvatar({ hoverable = false, block = false, border = false, size = 'medium', fontColor = 'white', borderColor = 'white', focusable = false, rounded = true, src = '', name = '', alt = '', uppercase = false }: SAvatarProps) {
+export default function SAvatar({ hoverable = false, block = false, border = false, size = 'medium', fontColor = 'white', borderColor = 'white', focusable = false, rounded = true, src = '', name = '', alt = '', uppercase = false, fontWeight = '400' }: SAvatarProps) {
 
-    const avatarStyles = assignAvatarStyles({ size, hoverable, borderColor, focusable, rounded, border });
+    const avatarStyles = assignAvatarStyles({ size, hoverable, borderColor, focusable, rounded, border, fontWeight });
 
     const textStyles = assignTextStyles(fontColor, size);
 
