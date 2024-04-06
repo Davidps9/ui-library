@@ -66,6 +66,15 @@ export default function assignBackgroundColor(color: string, style: string) {
         case 'blueGray':
             style += ' bg-blueGray-600';
             break;
+        case 'gray':
+            style += ' bg-gray-600';
+            break;
+        case 'black':
+            style += ' bg-black';
+            break;
+        case 'white':
+            style += ' bg-white';
+            break;
         default:
             style += ' bg-blue-600';
             break;
