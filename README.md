@@ -8,3 +8,5 @@ npm install simple-ui-library
 
 ## Documentation
 In order to set up correctly your React enviroment to use this library follow the documentation linked below
+
+https://simple-material-ui-library-docs.netlify.app/
