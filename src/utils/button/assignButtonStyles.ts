@@ -1,4 +1,5 @@
-import { Size } from "../../../index";
+import { Colors, Size } from "../../../index";
+import assignBackgroundColor from "../assignBackgroundColor";
 import assignBorderColor from "../assignBorderColor";
 import assignFontColor from "../text/assignFontColor";
 
@@ -14,14 +15,14 @@ export interface ButtonVariantProps {
     rounded: boolean;
     focusable: boolean;
     SButtonclass: string;
-
+    backgroundColor: Colors;
 }
 
 export default function assignButtonStyles(props: ButtonVariantProps) {
 
 
     let buttonStyles = props.SButtonclass + '';
-    const { variant, fontColor, size, disabled, borderColor, rounded, focusable } = props;
+    const { variant, fontColor, size, disabled, borderColor, rounded, focusable, backgroundColor } = props;
 
     buttonStyles += assignFontColor(fontColor, buttonStyles);
     if (!disabled) {
@@ -41,7 +42,8 @@ export default function assignButtonStyles(props: ButtonVariantProps) {
             buttonStyles += ' bg-transparent border-2';
             break;
         case 'contained':
-            buttonStyles += ' bg-blue-400 border-none';
+            buttonStyles += assignBackgroundColor(backgroundColor, buttonStyles);
+            buttonStyles += ' border-none';
             break;
         default:
             buttonStyles += ' bg-transparent border-2';
