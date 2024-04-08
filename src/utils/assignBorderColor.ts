@@ -1,68 +1,86 @@
 
-export default function assignBorderColor(borderColor: string, buttonStyles: string) {
+export default function assignBorderColor(borderColor: string, styles: string) {
 
     switch (borderColor) {
         case 'white':
-            buttonStyles += ' border-white';
+            styles += ' border-white';
             break;
         case 'black':
-            buttonStyles += ' border-black';
+            styles += ' border-black';
             break;
         case 'blue':
-            buttonStyles += ' border-blue-400';
+            styles += ' border-blue-400';
             break;
         case 'red':
-            buttonStyles += ' border-red-400';
+            styles += ' border-red-400';
             break;
         case 'green':
-            buttonStyles += ' border-green-400';
+            styles += ' border-green-400';
             break;
         case 'yellow':
-            buttonStyles += ' border-yellow-400';
-            break;
-        case 'indigo':
-            buttonStyles += ' border-indigo-400';
+            styles += ' border-yellow-400';
             break;
         case 'purple':
-            buttonStyles += ' border-purple-400';
+            styles += ' border-purple-400';
             break;
         case 'pink':
-            buttonStyles += ' border-pink-400';
+            styles += ' border-pink-400';
+            break;
+        case 'indigo':
+            styles += ' border-indigo-400';
             break;
         case 'teal':
-            buttonStyles += ' border-teal-400';
+            styles += ' border-teal-400';
             break;
         case 'cyan':
-            buttonStyles += ' border-cyan-400';
+            styles += ' border-cyan-400';
             break;
         case 'orange':
-            buttonStyles += ' border-orange-400';
+            styles += ' border-orange-400';
             break;
         case 'amber':
-            buttonStyles += ' border-amber-400';
+            styles += ' border-amber-400';
             break;
         case 'lime':
-            buttonStyles += ' border-lime-400';
+            styles += ' border-lime-400';
             break;
         case 'emerald':
-            buttonStyles += ' border-emerald-400';
+            styles += ' border-emerald-400';
             break;
         case 'rose':
-            buttonStyles += ' border-rose-400';
+            styles += ' border-rose-400';
             break;
         case 'fuchsia':
-            buttonStyles += ' border-fuchsia-400';
+            styles += ' border-fuchsia-400';
             break;
         case 'violet':
-            buttonStyles += ' border-violet-400';
+            styles += ' border-violet-400';
             break;
         case 'lightBlue':
-            buttonStyles += ' border-lightBlue-400';
+            styles += ' border-lightBlue-400';
+            break;
+        case 'gray':
+            styles += ' border-gray-400';
+            break;
+        case 'sky':
+            styles += ' border-sky-400';
+            break;
+        case 'coolGray':
+            styles += ' border-coolGray-400';
+            break;
+        case 'trueGray':
+            styles += ' border-trueGray-400';
+            break;
+        case 'warmGray':
+            styles += ' border-warmGray-400';
+            break;
+        case 'blueGray':
+            styles += ' border-blueGray-400';
             break;
         default:
-            buttonStyles += ' border-blue-400';
+            styles += ' border-blue-400';
             break;
     }
-    return buttonStyles;
+    return styles;
 
 }
