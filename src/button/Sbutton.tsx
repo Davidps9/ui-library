@@ -11,7 +11,7 @@ export type SbuttonProps = {
     borderColor?: Colors,
     rounded?: boolean,
     fontColor?: Colors,
-    children: string[],
+    children: string[] | string,
     type?: "button" | "submit" | "reset",
     backgroundColor?: Colors
 }
@@ -40,7 +40,11 @@ export default function Sbutton({ children, type, fontColor = 'white', backgroun
 
     return (
         < button type={type} className={buttonStyles} onClick={onClick} >
-            {uppercase ? children.map((child) => { return (child.toUpperCase()) }) : children}
+            {uppercase ?
+                children.toString().toUpperCase()
+                :
+                children
+            }
         </button >
     )
 }
