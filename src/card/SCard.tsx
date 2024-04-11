@@ -13,13 +13,17 @@ export type SCardsProps = {
     size?: Size,
     textColor?: Colors,
     limitText?: number,
-
+    variant?: CardVariant,
+    borderColor?: Colors,
+    shadowColor?: Colors
 }
 
+export type CardVariant = "elevated" | "filled" | "outlined";
 
-export default function SCard({ backgroundColor = 'black', limitText = 0, textColor = 'white', rounded = true, hoverable = true, image, text, title, subtitle, size = 'medium' }: SCardsProps) {
 
-    const cardstyle = assignCardStyles({ backgroundColor, rounded, hoverable, size, cardStyles: '' });
+export default function SCard({ backgroundColor = 'black', variant = "filled", shadowColor='black',borderColor="black" ,limitText = 0, textColor = 'white', rounded = true, hoverable = true, image, text, title, subtitle, size = 'medium' }: SCardsProps) {
+
+    const cardstyle = assignCardStyles({ backgroundColor, rounded, hoverable, size, variant, borderColor,shadowColor ,cardStyles: '' });
     return (
         <div className={cardstyle + ' text-left'}>
             {image && <img className={' object-cover h-1/2 w-full ' + (rounded ? 'rounded-t-md' : null)} src={image} alt="card image" />}
